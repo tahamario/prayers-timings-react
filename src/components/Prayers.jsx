@@ -53,7 +53,6 @@ export default function Prayers() {
     }]
     
     const [nextPrayerIndex, setNextPrayerIndex] = useState(0)
-
     const [displayRemainingTime, setDisplayRemainingTimg] = useState()
 
     const prayersArray = [
