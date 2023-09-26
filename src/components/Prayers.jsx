@@ -122,6 +122,7 @@ export default function Prayers() {
 
     useEffect(() => {
         getTimingsApi();
+        document.title = 'Prayers Timings';
     }, [city])
 
     useEffect(() => {
