@@ -63,16 +63,21 @@ function App() {
     if (theme) {
       setTheme(false);
       setModeText('dark');
-      sessionStorage.setItem('themeDarkMode', false)
+      localStorage.setItem('themeDarkMode',false)
+      // sessionStorage.setItem('themeDarkMode', false)
     } else {
       setTheme(true);
       setModeText('light');
-      sessionStorage.setItem('themeDarkMode', true)
+      localStorage.setItem('themeDarkMode',true)
+      // sessionStorage.setItem('themeDarkMode', true)
     }
   }
 
   useEffect(() => {
-    const darkTheme = sessionStorage.getItem('themeDarkMode');
+    // const darkTheme = sessionStorage.getItem('themeDarkMode');
+    
+    const darkTheme =  localStorage.getItem('themeDarkMode');
+    console.log(darkTheme)
     if (darkTheme === 'false') {
       setTheme(false);
       setModeText('dark');
