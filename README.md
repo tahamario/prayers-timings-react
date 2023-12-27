@@ -14,7 +14,7 @@ To run this project locally, follow these steps:
 2. Install the required dependencies using npm or yarn.
 3. Start the development server using npm run dev or yarn dev.
 ```console
-git clone https://github.com/yourusername/prayer-timing-app.git
+git clone https://github.com/tahamario/prayer-timing-app.git
 cd prayer-timing-app
 npm install # or yarn install
 npm run dev # or yarn dev
