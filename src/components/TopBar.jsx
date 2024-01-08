@@ -10,7 +10,24 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['الرئسية', 'شاهد عنا', 'راسلنا'];
+const pages = [
+    {
+        name: 'الرئسية',
+        link: '/',
+    },
+    {
+        name: 'القرآن الكريم',
+        link: 'https://the-quran-in-your-hands.vercel.app/',
+    },
+    {
+        name: 'شاهد عنا',
+        link: 'https://github.com/tahamario',
+    },
+    {
+        name: 'راسلنا',
+        link: 'mailto:taha.moudnib@hotmail.com',
+    },
+];
 
 export default function TopBar() {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -34,9 +51,10 @@ export default function TopBar() {
                         href="/"
                         sx={{
                             mr: 2,
+                            ml:5,
                             display: { xs: 'none', md: 'flex' },
                             fontFamily: 'IBM Plex Sans Arabic',
-                            fontWeight: 700,
+                            fontWeight: 900,
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
@@ -74,8 +92,8 @@ export default function TopBar() {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                <MenuItem key={page.name} component={"a"} href={page.link} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">{page.name}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -91,22 +109,22 @@ export default function TopBar() {
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
                             fontFamily: 'monospace',
-                            fontWeight: 700,
+                            fontWeight: 900,
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
-                    >
-                        مواقيت الصلوات
+                    >مواقيت الصلوات
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
-                                key={page}
+                                key={page.name}
+                                component={"a"} 
+                                href={page.link} 
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
+                            >{page.name}
                             </Button>
                         ))}
                     </Box>
