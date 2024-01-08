@@ -34,8 +34,8 @@ const manifestForPlugIn = {
         purpose:'any maskable',
       }
     ],
-    theme_color: '#bab8b6',
-    background_color: '#fff',
+    theme_color: '#ffffff',
+    background_color: '#ffffff',
     display: "standalone",
     scope: '/',
     start_url: "/",
