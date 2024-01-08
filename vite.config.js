@@ -44,6 +44,7 @@ const manifestForPlugIn = {
 }
 export default defineConfig({
   plugins: [
-    react(), VitePWA(manifestForPlugIn)
+    react(), VitePWA({srcDir: 'src',
+    filename: 'sw.js'},manifestForPlugIn)
   ],
 })
